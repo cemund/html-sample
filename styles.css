@@ -1,0 +1,164 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  background-color: black;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Oswald", sans-serif;
+}
+
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 30vw 0 5vw;
+  position: relative;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+header,
+header:before {
+  background: 50% 50% / cover;
+}
+
+header::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://media.cnn.com/api/v1/images/stellar/prod/201020100344-01-gchq-official-history-scli-intl-gbr.jpg?q=w_3000,h_2155,x_0,y_0,c_fill");
+  z-index: -1;
+  min-height: 100vh;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+header p,
+#title,
+#name {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 1em;
+}
+
+#title {
+  margin-top: -160px;
+  font-size: 3.5em;
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 110vh;
+  /* max-width: 576px; */
+}
+
+#tribute-info,
+#tribute-misc {
+  margin: 0 auto;
+  width: 85%;
+
+  max-width: 576px;
+  font-size: 1em;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#tribute-misc > a {
+  text-align: center;
+  display: block;
+  color: #cba339;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 70px;
+}
+
+#tribute-misc > p {
+  color: #cba339;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#tribute-misc > audio {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  color: #cba339;
+}
+
+#tribute-misc {
+  margin-bottom: 70px;
+}
+
+#more {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#more > a {
+  color: #cba339;
+}
+
+.wrapper {
+  /* height: 100vh; */
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
